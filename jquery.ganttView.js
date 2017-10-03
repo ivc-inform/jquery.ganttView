@@ -40,7 +40,7 @@ behavior: {
     };
     
     function build(options) {
-    	
+		
     	var els = this;
         var defaults = {
             showWeekends: true,
@@ -118,7 +118,7 @@ behavior: {
             applyLastClass(div.parent());
 		}
 		
-		var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+		var monthNames = ["Январь", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 		// Creates a 3 dimensional array [year][month][day] of every day 
 		// between the given start and end dates
