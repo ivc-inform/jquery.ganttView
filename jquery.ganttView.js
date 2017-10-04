@@ -369,14 +369,6 @@ behavior: {
     var DateUtils = {
 
         daysBetween: function (start, end) {
-            if (!start || !end) {
-                return 0;
-            }
-            start = Date.parse(start);
-            end = Date.parse(end);
-            if (start.getYear() == 1901 || end.getYear() == 8099) {
-                return 0;
-            }
             var count = 0, date = start.clone();
             while (date.compareTo(end) == -1) {
                 count = count + 1;
@@ -394,12 +386,12 @@ behavior: {
         },
 
         getBoundaryDatesFromData: function (data, minDays) {
-            var minStart = new Date();
+            var minStart = new Date(),
             maxEnd = new Date();
             for (var i = 0; i < data.length; i++) {
                 for (var j = 0; j < data[i].series.length; j++) {
-                    var start = Date.parse(data[i].series[j].start);
-                    var end = Date.parse(data[i].series[j].end)
+                    var start = data[i].series[j].start;
+                    var end = data[i].series[j].end
                     if (i == 0 && j == 0) {
                         minStart = start;
                         maxEnd = end;
