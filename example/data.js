@@ -59,12 +59,5 @@ var unhierarchicalGanttData = [
             {name: "Задача 2", start: new Date(2011, 8, 2), end: new Date(2011, 8, 5), color: "#f0f0f0"},
             {name: "Задача 3", start: new Date(2011, 8, 1), end: new Date(2011, 8, 10), color: "#e0e0e0"}
         ]
-    },
-    {
-        series: [
-            {name: "Задача 4", start: new Date(2011, 8, 1), end: new Date(2011, 8, 3)},
-            {name: "Задача 5", start: new Date(2011, 8, 2), end: new Date(2011, 8, 5), color: "#f0f0f0"},
-            {name: "Задача 6", start: new Date(2011, 8, 1), end: new Date(2011, 8, 10), color: "#e0e0e0"}
-        ]
     }
 ];
