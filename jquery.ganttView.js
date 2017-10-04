@@ -199,7 +199,7 @@ behavior: {
                         if (DateUtils.isWeekend(dates[y][m][d]) && showWeekends) {
                             cellDiv.addClass("ganttview-weekend");
                         }
-                        if (DateUtils.isToday(dates[y][m][d]) && showToday) {
+                        if (dates[y][m][d].isToday() && showToday) {
                             cellDiv.addClass("ganttview-today");
                         }
                         rowDiv.append(cellDiv);
@@ -369,25 +369,22 @@ behavior: {
     var DateUtils = {
 
         daysBetween: function (start, end) {
-            var count = 0, date = start.clone();
+            /*var count = 0, date = start.clone();
             while (date.compareTo(end) == -1) {
                 count = count + 1;
                 date.addDays(1);
             }
-            return count;
+            return count;*/
+            return Math.ceil((end.getTime() - start.getTime()) / (1000 * 3600 * 24));
         },
 
         isWeekend: function (date) {
             return date.getDay() % 6 == 0;
         },
 
-        isToday: function (date) {
-            return date.isToday();
-        },
-
         getBoundaryDatesFromData: function (data, minDays) {
             var minStart = new Date(),
-            maxEnd = new Date();
+                maxEnd = new Date();
             for (var i = 0; i < data.length; i++) {
                 for (var j = 0; j < data[i].series.length; j++) {
                     var start = data[i].series[j].start;
