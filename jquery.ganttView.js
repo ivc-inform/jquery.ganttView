@@ -79,12 +79,13 @@ behavior: {
                 var container = jQuery(this);
                 var div = jQuery("<div>", {"class": "ganttview"});
                 new Chart(div, opts).render();
+
+                var a = div.html()
                 container.append(div);
 
-                var w = jQuery("div.ganttview-vtheader", container).outerWidth() +
-                    jQuery("div.ganttview-slide-container", container).outerWidth();
+                var w = jQuery("div.ganttview-vtheader", container).outerWidth() + jQuery("div.ganttview-slide-container", container).outerWidth();
                 container.css("width", (w + 2) + "px");
-
+                
                 new Behavior(container, opts).apply();
             });
         }
