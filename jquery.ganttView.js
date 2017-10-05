@@ -148,16 +148,18 @@ behavior: {
             var headerDiv = jQuery("<div>", {"class": "ganttview-vtheader"});
             for (var i = 0; i < data.length; i++) {
                 var itemDiv = jQuery("<div>", {"class": "ganttview-vtheader-item"});
+
                 if ($.trim(data[i].name).length > 0)
                     itemDiv.append(jQuery("<div>", {
                         "class": "ganttview-vtheader-item-name",
                         "css"  : {"height": (data[i].series.length * cellHeight) + "px"}
                     }).append(data[i].name));
+
                 var seriesDiv = jQuery("<div>", {"class": "ganttview-vtheader-series"});
                 for (var j = 0; j < data[i].series.length; j++) {
-                    seriesDiv.append(jQuery("<div>", {"class": "ganttview-vtheader-series-name"})
-                                         .append(data[i].series[j].name));
+                    seriesDiv.append(jQuery("<div>", {"class": "ganttview-vtheader-series-name"}).append(data[i].series[j].name));
                 }
+                
                 itemDiv.append(seriesDiv);
                 headerDiv.append(itemDiv);
             }
@@ -178,8 +180,7 @@ behavior: {
                         "css"  : {"width": (w - 1) + "px"}
                     }).append(monthNames[m] + "/" + y));
                     for (var d in dates[y][m]) {
-                        daysDiv.append(jQuery("<div>", {"class": "ganttview-hzheader-day"})
-                                           .append(dates[y][m][d].getDate()));
+                        daysDiv.append(jQuery("<div>", {"class": "ganttview-hzheader-day"}).append(dates[y][m][d].getDate()));
                     }
                 }
             }
@@ -214,6 +215,7 @@ behavior: {
                     gridDiv.append(rowDiv.clone());
                 }
             }
+            var hh = gridDiv.html()
             div.append(gridDiv);
         }
 
@@ -252,6 +254,9 @@ behavior: {
                     rowIdx = rowIdx + 1;
                 }
             }
+
+            var hh = rows.html()
+            var a = 0
         }
 
         function addBlockData(block, data, series) {
