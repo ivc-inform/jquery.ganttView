@@ -350,8 +350,7 @@ behavior: {
 
             // Remove top and left properties to avoid incorrect block positioning,
             // set position to relative to keep blocks relative to scrollbar when scrolling
-            block.css("top", "").css("left", "")
-                .css("position", "relative").css("margin-left", offset + "px");
+            block.css("top", "").css("left", "").css("position", "relative").css("margin-left", offset + "px");
         }
 
         return {
