@@ -52,7 +52,7 @@ var ganttData = [
     }
 ];
 
-var unhierarchicalGanttData = [
+var unhierarchicalGanttData1 = [
     {
         series: [
             {name: "Задача 1", start: new Date(2011, 8, 1), end: new Date(2011, 8, 3)},
@@ -62,7 +62,7 @@ var unhierarchicalGanttData = [
     }
 ];
 
-var unhierarchicalGanttData1 = [
+var unhierarchicalGanttData = [
     {
         series: [
             {name: "Задача 1", start: new Date(2011, 8, 1), end: new Date(2011, 8, 3)}
