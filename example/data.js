@@ -6,7 +6,7 @@ var ganttData = [
             {name: "Planned", start: new Date(2010, 00, 01), end: new Date(2010, 00, 03)},
             {name: "Actual", start: new Date(2010, 00, 02), end: new Date(2010, 00, 05), color: "#f0f0f0"}
         ]
-    },
+    }/*,
     {
         id    : 2,
         name  : "Feature 2",
@@ -63,7 +63,7 @@ var ganttData = [
             {name: "Planned", start: new Date(2010, 01, 01), end: new Date(2010, 01, 03)},
             {name: "Actual", start: new Date(2010, 01, 01), end: new Date(2010, 01, 05), color: "#f0f0f0"}
         ]
-    }
+    }*/
 ];
 
 var unhierarchicalGanttData = [
