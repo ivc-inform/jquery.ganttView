@@ -80,10 +80,8 @@ behavior: {
                 var div = jQuery("<div>", {"class": "ganttview"});
                 new Chart(div, opts).render();
 
+                var a = div.html()
                 container.append(div);
-
-                // console.log(jQuery("div.ganttview-vtheader", container).outerWidth())
-                // console.log(jQuery("div.ganttview-slide-container", container).outerWidth())
 
                 var w = jQuery("div.ganttview-vtheader", container).outerWidth() + jQuery("div.ganttview-slide-container", container).outerWidth();
                 container.css("width", (w + 2) + "px");
@@ -148,10 +146,7 @@ behavior: {
         }
 
         function addVtHeader(div, data, cellHeight) {
-            var headerDiv = jQuery("<div>", {
-                "class": "ganttview-vtheader",
-                "css"  : {"width": "135px"}
-            });
+            var headerDiv = jQuery("<div>", {"class": "ganttview-vtheader"});
             for (var i = 0; i < data.length; i++) {
                 var itemDiv = jQuery("<div>", {"class": "ganttview-vtheader-item"});
 
